@@ -10,13 +10,13 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
-		"express": "^5.0.0-alpha.2",
 		"body-parser": "^1.15.2",
-		"mocha": "^3.1.0",
 		"chai": "^3.5.0",
-		"chai-http": "^3.0.0",
-		"zombie": "^4.2.1",
-		"cors": "^2.8.1"
+		"chai-http": "^4.3.0",
+		"cors": "^2.8.1",
+		"express": "^5.0.0-alpha.2",
+		"mocha": "^7.2.0",
+		"zombie": "^6.1.4"
 	},
 	"engines": {
 		"node": "4.4.5"
