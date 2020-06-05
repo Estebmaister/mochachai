@@ -1,7 +1,9 @@
 # Node Server - Quality Assurance with Chai in FCC
 
 ![GitHub package.json version][gh-pack-json-v] ![GitHub package.json dependency version express][gh-pack-json-dep-v-express] ![Last commit][last-commit-bdg] [![Website][website-bdg]][website] [![MIT License][license-bdg]][license] [![Twitter Follow][twitter-bdg]][twitter]
+
 [![Workflow badge][workflow-bdg]][glitch-workflow] [![PRs Welcome][prs-bdg]][prs-site]
+
 Created from the [FCC](https://freecodecamp.com) repository, to compile the lessons about node and express.
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F31OD9K)
@@ -19,13 +21,13 @@ Adding the files from the original repo in FCC and start to coding.
 
 To install all the dependencies :
 
-```bash
+```shell
 npm install
 ```
 
 To run the server
 
-```bash
+```shell
 node server.js
 ```
 
