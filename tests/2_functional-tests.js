@@ -282,6 +282,7 @@ suite("Functional Tests", () => {
 
       // ### EXAMPLE ###
       test('#example - submit the input "surname" : "Polo"', (done) => {
+        // This function change in a recent update of Zombie.JS and now return a promise.
         browser
           .fill("surname", "Polo")
           .then(() =>
