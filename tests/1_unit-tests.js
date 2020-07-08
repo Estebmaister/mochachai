@@ -118,7 +118,7 @@ suite('Unit Tests', () => {
 				weirdNumbers(0.2),
 				0.7,
 				0.5,
-				'Not so clear a first sight, but +/- 0.5'
+				'Not so clear at first sight, but +/- 0.5'
 			);
 		});
 	});
