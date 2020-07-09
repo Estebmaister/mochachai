@@ -1,2 +1,5 @@
+language: node
+rvm:
+ - 12
 install:
-  - npm install
+ - npm install

@@ -11,30 +11,26 @@ const testDir = './tests';
 // Add each .js file to the mocha instance
 fs
 	.readdirSync(testDir)
-	.filter(function (file) {
-		// Only keep the .js files
-		return file.substr(-3) === '.js';
-	})
-	.forEach(function (file) {
-		mocha.addFile(path.join(testDir, file));
-	});
+	// Only keep the .js files
+	.filter((file) => file.substr(-3) === '.js')
+	.forEach((file) => mocha.addFile(path.join(testDir, file)));
 
-var emitter = new EventEmitter();
-emitter.run = function () {
-	var tests = [];
-	var context = '';
-	var separator = ' -> ';
+const emitter = new EventEmitter();
+emitter.run = () => {
+	const tests = [];
+	const separator = ' -> ';
+	let context = '';
 	// Run the tests.
 	try {
 		var runner = mocha
 			.ui('tdd')
 			.run()
-			.on('test end', function (test) {
+			.on('test end', (test) => {
 				// remove comments
-				var body = test.body.replace(/\/\/.*\n|\/\*.*\*\//g, '');
+				let body = test.body.replace(/\/\/.*\n|\/\*.*\*\//g, '');
 				// collapse spaces
 				body = body.replace(/\s+/g, ' ');
-				var obj = {
+				const obj = {
 					title: test.title,
 					context: context.slice(0, -separator.length),
 					state: test.state,
@@ -43,16 +39,15 @@ emitter.run = function () {
 				};
 				tests.push(obj);
 			})
-			.on('end', function () {
+			.on('end', () => {
 				emitter.report = tests;
 				emitter.emit('done', tests);
 			})
-			.on('suite', function (s) {
-				context += s.title + separator;
-			})
-			.on('suite end', function (s) {
-				context = context.slice(0, -(s.title.length + separator.length));
-			});
+			.on('suite', (s) => (context += s.title + separator))
+			.on(
+				'suite end',
+				(s) => (context = context.slice(0, -(s.title.length + separator.length)))
+			);
 	} catch (e) {
 		throw e;
 	}
