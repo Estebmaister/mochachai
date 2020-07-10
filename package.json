@@ -5,11 +5,10 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
-		"mocha": "mocha -u tdd tests",
-		"test": "nyc --reporter=html --reporter=text npm run mocha",
+		"test": "nyc --reporter=html --reporter=text mocha -u tdd tests",
 		"coverage-report": "start ./coverage/index.html",
 		"test-travis": "node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -u tdd -R spec ./tests/*",
-		"test-cov": "nyc npm run mocha"
+		"tic": "cat ./coverage/lcov.info | coveralls"
 	},
 	"dependencies": {
 		"body-parser": "^1.19.0",
@@ -17,8 +16,6 @@
 		"chai-http": "^4.3.0",
 		"cors": "^2.8.5",
 		"express": "^5.0.0-alpha.2",
-		"istanbul": "^0.4.5",
-		"mocha": "^8.0.1",
 		"nyc": "^15.1.0",
 		"zombie": "^6.1.4"
 	},
@@ -40,6 +37,8 @@
 	"license": "MIT",
 	"devDependencies": {
 		"coveralls": "^3.1.0",
+		"istanbul": "^0.4.5",
+		"mocha": "^8.0.1",
 		"mocha-lcov-reporter": "^1.3.0",
 		"nodemon": "^2.0.4"
 	}
