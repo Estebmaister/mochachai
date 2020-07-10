@@ -8,7 +8,6 @@
 		"mocha": "mocha -u tdd tests",
 		"test": "nyc --reporter=html --reporter=text npm run mocha",
 		"coverage-report": "start ./coverage/index.html",
-		"coverage": "nyc report --reporter=text-lcov | coveralls",
 		"test-travis": "istanbul cover ./node_modules/mocha/bin/_mocha -- -u tdd -R spec ./tests/*",
 		"test-cov": "nyc npm run mocha"
 	},

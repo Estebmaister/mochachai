@@ -11,9 +11,8 @@ env:
 install:
  - npm ci
 script:
- - npm run-script test-travis
  - npm test
- - npm coverage
+ - npm run-script test-travis
  # Send coverage data to Coveralls
 after_script: 'cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js'
 # jobs:
