@@ -1,9 +1,9 @@
 language: node_js
 node_js:
  - node
- - 12
- - 10
  - 8
+ - 10
+ - 12
 env:
  global:
   - COVERALLS_PARALLEL=true
@@ -11,9 +11,9 @@ env:
 install:
  - npm ci
 script:
- - npm test
+ # - npm test
  - npm run-script test-travis
- # Send coverage data to Coveralls
+# Send coverage data to Coveralls
 after_script: 'cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js'
 # jobs:
 #  include:
