@@ -323,7 +323,7 @@ suite('Functional Tests', () => {
 							browser.assert.text('span#surname', 'Vespucci');
 							browser.assert.element('span#dates', 1);
 							done();
-							setTimeout(() => process.exit(0), 1);
+							setTimeout(() => process.exit(), 100);
 						})
 					)
 					.catch((err) => console.log(`error = ${err.code}`));
@@ -331,3 +331,7 @@ suite('Functional Tests', () => {
 		});
 	});
 });
+
+process.on('exit', (code) =>
+	console.log(`Tests finished, exit with code: ${code}`)
+);
