@@ -41,11 +41,7 @@ suite('Functional Tests', () => {
 						// res.status contains the status code
 						assert.equal(res.status, 200, 'response status should be 200');
 						// res.text contains the response as a string
-						assert.equal(
-							res.text,
-							'hello John',
-							'response should be "hello John"'
-						);
+						assert.equal(res.text, 'hello John', 'response should be "hello John"');
 						done();
 					});
 			});
@@ -84,10 +80,7 @@ suite('Functional Tests', () => {
 						// Replace assert.fail(). Make the test pass.
 						// Test the status and the text response. Follow the test order like above.
 						assert.equal(res.status, 200);
-						assert.equal(
-							res.text,
-							'hello Esteban' /** <==  Put your name here **/
-						);
+						assert.equal(res.text, 'hello Esteban' /** <==  Put your name here **/);
 						done(); // Always call the 'done()' callback when finished.
 					});
 			});
@@ -114,19 +107,11 @@ suite('Functional Tests', () => {
 
 						// Testing the headers
 						assert.equal(res.status, 200, 'response status should be 200');
-						assert.equal(
-							res.type,
-							'application/json',
-							'Response should be json'
-						);
+						assert.equal(res.type, 'application/json', 'Response should be json');
 
 						// res.body contains the response parsed as a JS object, when appropriate
 						// (i.e the response type is JSON)
-						assert.equal(
-							res.body.name,
-							'Marco',
-							'res.body.name should be "Marco"'
-						);
+						assert.equal(res.body.name, 'Marco', 'res.body.name should be "Marco"');
 						assert.equal(
 							res.body.surname,
 							'Polo',
@@ -159,11 +144,7 @@ suite('Functional Tests', () => {
 
 						// Testing the headers
 						assert.equal(res.status, 200, 'response status should be 200');
-						assert.equal(
-							res.type,
-							'application/json',
-							'Response should be json'
-						);
+						assert.equal(res.type, 'application/json', 'Response should be json');
 
 						// Testing the res.body that contains the response parsed as a JS Object
 						assert.equal(
@@ -199,11 +180,7 @@ suite('Functional Tests', () => {
 
 						// Testing the headers
 						assert.equal(res.status, 200, 'response status should be 200');
-						assert.equal(
-							res.type,
-							'application/json',
-							'Response should be json'
-						);
+						assert.equal(res.type, 'application/json', 'Response should be json');
 
 						// Testing the res.body that contains the response parsed as a JS Object
 						assert.equal(
@@ -346,6 +323,7 @@ suite('Functional Tests', () => {
 							browser.assert.text('span#surname', 'Vespucci');
 							browser.assert.element('span#dates', 1);
 							done();
+							setTimeout(() => process.exit(0), 1);
 						})
 					)
 					.catch((err) => console.log(`error = ${err.code}`));
