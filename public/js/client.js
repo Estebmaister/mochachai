@@ -10,7 +10,7 @@ function Utils() {
 
 		xmlhttp.onreadystatechange = () => {
 			if (xmlhttp.readyState === 4) {
-				if (!(Math.floor(xmlhttp.status / 100) === 2)) return cb(xmlhttp);
+				if (Math.floor(xmlhttp.status / 100) !== 2) return cb(xmlhttp);
 				let results = xmlhttp.responseText;
 				const type = xmlhttp.getResponseHeader('Content-Type');
 				if (type.match('application/json')) results = JSON.parse(results);

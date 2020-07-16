@@ -1,5 +1,5 @@
 {
-	"name": "mochacai",
+	"name": "mochachai",
 	"version": "0.0.1",
 	"description": "Mocha & Chai project for testing",
 	"main": "server.js",
@@ -8,7 +8,8 @@
 		"test": "nyc --reporter=html --reporter=text mocha -u tdd tests",
 		"coverage-report": "start ./coverage/index.html",
 		"test-travis": "node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -u tdd -R spec ./tests/*",
-		"tic": "cat ./coverage/lcov.info | coveralls"
+		"tic": "cat ./coverage/lcov.info | coveralls",
+		"sonar": "sonar-scanner.bat"
 	},
 	"dependencies": {
 		"body-parser": "^1.19.0",

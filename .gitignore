@@ -9,6 +9,8 @@
 *debug.log*
 *error.log*
 /coverage
+/.scannerwork
+/.nyc_output
 
 # production
 /build

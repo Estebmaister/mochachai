@@ -22,7 +22,7 @@ emitter.run = () => {
 	let context = '';
 	// Run the tests.
 	try {
-		var runner = mocha
+		mocha
 			.ui('tdd')
 			.run()
 			.on('test end', (test) => {
@@ -49,6 +49,7 @@ emitter.run = () => {
 				(s) => (context = context.slice(0, -(s.title.length + separator.length)))
 			);
 	} catch (e) {
+		console.err(e);
 		throw e;
 	}
 };
