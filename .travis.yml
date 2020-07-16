@@ -12,8 +12,9 @@ install:
   - npm ci
 script:
   - npm run-script test-travis
-  - codecov
   - npm install -g codecov
+  - codecov
+
 # Send coverage data to Coveralls
 after_script: "cat ./coverage/lcov.info | coveralls"
 # jobs:
