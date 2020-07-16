@@ -1,25 +1,24 @@
 language: node_js
 node_js:
-  - 10
-  - 12
-  - node
-env:
-  global:
-    - COVERALLS_PARALLEL=true
-    - COVERALLS_REPO_TOKEN=TW6CijIur1jykAEhhgxJ4L3njwddNvzD3
-    - CODECOV_TOKEN="d01d1c49-889a-46ef-9d4e-76f92baa14e0"
+ - 10
+ - 12
+ - node
+# env:
+#   global:
+#     - COVERALLS_PARALLEL=true
+#     - COVERALLS_REPO_TOKEN=TW6CijIur1jykAEhhgxJ4L3njwddNvzD3
+#     - CODECOV_TOKEN="d01d1c49-889a-46ef-9d4e-76f92baa14e0"
 install:
-  - npm ci
+ - npm ci
 script:
-  - npm run-script test-travis
-  - npm install -g codecov
-  - codecov
+ - npm run-script test-travis
+ - codecov
 
 # Send coverage data to Coveralls
-after_script: "cat ./coverage/lcov.info | coveralls"
+after_script: 'cat ./coverage/lcov.info | coveralls'
 # jobs:
 #  include:
 #   - script: COVERALLS_FLAG_NAME=test-1 make test-coveralls-1
 #   - script: COVERALLS_FLAG_NAME=test-2 make test-coveralls-2
 notifications:
-  webhooks: https://coveralls.io/webhook
+ webhooks: https://coveralls.io/webhook

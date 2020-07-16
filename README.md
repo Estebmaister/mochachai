@@ -1,6 +1,6 @@
 # Node Server - Quality Assurance with Chai in FCC
 
-[![Travis (.org) branch](https://img.shields.io/travis/estebmaister/mochachai/master?style=plastic&logo=travis)](https://travis-ci.com/Estebmaister/mochachai) [![Coveralls github](https://img.shields.io/coveralls/github/Estebmaister/mochachai?logo=coveralls&style=plastic)](https://coveralls.io/github/Estebmaister/mochachai?branch=master)
+[![Travis (.org)](https://img.shields.io/travis/estebmaister/mochachai?color=g&label=Build&logo=travis&style=plastic)](https://travis-ci.org/github/Estebmaister/mochachai) [![Coveralls github](https://img.shields.io/coveralls/github/Estebmaister/mochachai?logo=coveralls&style=plastic)](https://coveralls.io/github/Estebmaister/mochachai?branch=master)
 
 ![GitHub package.json version][gh-pack-json-v] ![GitHub package.json dependency version express][gh-pack-json-dep-v-express] ![Last commit][last-commit-bdg] [![Website][website-bdg]][website] [![MIT License][license-bdg]][license] [![Twitter Follow][twitter-bdg]][twitter] [![Slack Channel](https://img.shields.io/static/v1?label=Slack&message=chat&style=social&logo=slack)](https://acme-ec.slack.com/)
 
