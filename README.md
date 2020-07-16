@@ -1,6 +1,6 @@
 # Node Server - Quality Assurance with Chai in FCC
 
-[![Travis (.org) branch](https://img.shields.io/travis/estebmaister/mochachai/master?style=plastic&logo=travis)](https://travis-ci.com/Estebmaister/mochachai) [![Coverage Status](https://coveralls.io/repos/github/Estebmaister/mochachai/badge.svg?branch=master)](https://coveralls.io/github/Estebmaister/mochachai?branch=master)
+[![Travis (.org) branch](https://img.shields.io/travis/estebmaister/mochachai/master?style=plastic&logo=travis)](https://travis-ci.com/Estebmaister/mochachai) [![Coveralls github](https://img.shields.io/coveralls/github/Estebmaister/mochachai?logo=coveralls&style=plastic)](https://coveralls.io/github/Estebmaister/mochachai?branch=master)
 
 ![GitHub package.json version][gh-pack-json-v] ![GitHub package.json dependency version express][gh-pack-json-dep-v-express] ![Last commit][last-commit-bdg] [![Website][website-bdg]][website] [![MIT License][license-bdg]][license] [![Twitter Follow][twitter-bdg]][twitter] [![Slack Channel](https://img.shields.io/static/v1?label=Slack&message=chat&style=social&logo=slack)](https://acme-ec.slack.com/)
 
@@ -50,6 +50,8 @@ This file contains multiple suites of tests for the project, in the code the tes
 After that, begin the tests in the second file “2_functional-tests.js”.
 
 In this case the tests are a little more complicated, but again they are well explained.
+
+[![Build Status](https://travis-ci.com/Estebmaister/mochachai.svg?branch=master)](https://travis-ci.com/Estebmaister/mochachai) [![Coverage Status](https://coveralls.io/repos/github/Estebmaister/mochachai/badge.svg?branch=master&style=plastic)](https://coveralls.io/github/Estebmaister/mochachai?branch=master)
 
 <!-- General links -->
 
