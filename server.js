@@ -59,10 +59,8 @@ const travellers = (req, res) => {
 	}
 	res.json(data);
 };
-
 app.route('/travellers').put(travellers);
 
-let error;
 app.route('/_api/get-tests').get(
 	cors(),
 	(req, res, next) => {
@@ -87,16 +85,14 @@ const listener = app.listen(process.env.PORT || 3000, 'localhost', () => {
 	const { address, port } = listener.address();
 	console.log(`Server is listening at http://${address}:${port}`);
 	// Comment the next line to run the tests when start the server
-	process.env.SKIP_TESTS = true;
+	// process.env.SKIP_TESTS = true;
 	if (!process.env.SKIP_TESTS) {
 		console.log('Running Tests...');
 		setTimeout(() => {
 			try {
 				runner.run();
-			} catch (e) {
-				error = e;
-				console.log('Tests are not valid:');
-				console.log(error);
+			} catch (err) {
+				console.log('Tests are not valid:', err.message);
 			}
 		}, 1500);
 	}
