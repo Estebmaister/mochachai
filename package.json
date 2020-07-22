@@ -1,6 +1,7 @@
 {
-	"name": "mochachai",
-	"version": "0.0.1",
+	"name": "mocha-chai",
+	"author": "http://github.com/estebmaister",
+	"version": "1.0.2",
 	"description": "Mocha & Chai project for testing",
 	"main": "server.js",
 	"scripts": {
@@ -37,7 +38,7 @@
 	],
 	"license": "MIT",
 	"devDependencies": {
-		"codecov": "^3.7.0",
+		"codecov": "^3.7.2",
 		"coveralls": "^3.1.0",
 		"istanbul": "^0.4.5",
 		"mocha": "^8.0.1",
