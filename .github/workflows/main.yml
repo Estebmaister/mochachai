@@ -23,7 +23,7 @@ jobs:
     
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Sync to Glitch Project
-      uses: kanadgupta/glitch-sync@master
+      uses: kanadgupta/glitch-sync@main
       with:
         project-id: '${{ secrets.projectId }}'
         auth-token: '${{ secrets.authToken }}'
